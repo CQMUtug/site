@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaTeX - 专业文档排版系统</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="latex-logo">L<sup>A</sup>T<sub>E</sub>X</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">首页</a></li>
+                <li><a href="#about" class="nav-link">关于</a></li>
+                <li><a href="#features" class="nav-link">特性</a></li>
+                <li><a href="#examples" class="nav-link">示例</a></li>
+                <li><a href="#resources" class="nav-link">资源</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主页面 -->
+    <main>
+        <!-- 英雄区域 -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="latex-logo-large">L<sup>A</sup>T<sub>E</sub>X</span>
+                    </h1>
+                    <p class="hero-subtitle">专业文档排版系统</p>
+                    <p class="hero-description">
+                        LaTeX 是一个高质量的排版系统，特别适合生成技术和科学文档。
+                        它是科学文档交流和出版的事实标准。
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="scrollToSection('about')">了解更多</button>
+                        <button class="btn btn-secondary" onclick="scrollToSection('examples')">查看示例</button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="latex-preview">
+                        <div class="preview-header">document.tex</div>
+                        <div class="preview-content">
+                            <code>
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\title{学术论文标题}
+\author{作者姓名}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{引言}
+这是一个使用 LaTeX 排版的
+专业文档示例...
+
+\begin{equation}
+E = mc^2
+\end{equation}
+
+\end{document}
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关于部分 -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">关于 LaTeX</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="lead">
+                            LaTeX（发音为"Lah-tech"或"Lay-tech"）是基于 TeX 排版系统的文档准备系统。
+                            它由 Leslie Lamport 在 1980 年代开发，现已成为学术和科学出版的标准工具。
+                        </p>
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <h3>专业排版</h3>
+                                <p>提供精确的版面控制和优美的数学公式排版</p>
+                            </div>
+                            <div class="feature-item">
+                                <h3>结构化写作</h3>
+                                <p>分离内容与格式，让作者专注于内容创作</p>
+                            </div>
+                            <div class="feature-item">
+                                <h3>广泛应用</h3>
+                                <p>学术论文、书籍、报告等专业文档的首选工具</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-timeline">
+                        <h3>发展历程</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-year">1978</div>
+                                <div class="timeline-content">Donald Knuth 开发 TeX</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">1985</div>
+                                <div class="timeline-content">Leslie Lamport 发布 LaTeX</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">1994</div>
+                                <div class="timeline-content">LaTeX2e 发布</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">2020</div>
+                                <div class="timeline-content">LaTeX3 项目持续发展</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 特性部分 -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title">核心特性</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">∑</div>
+                        <h3>数学公式</h3>
+                        <p>世界上最强大的数学公式排版系统，支持复杂的数学表达式</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h3>文献管理</h3>
+                        <p>强大的交叉引用和文献引用系统，自动生成参考文献</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>版面设计</h3>
+                        <p>精确的版面控制，生成专业级别的文档排版效果</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔧</div>
+                        <h3>可扩展性</h3>
+                        <p>丰富的宏包生态系统，满足各种专业排版需求</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌐</div>
+                        <h3>多语言支持</h3>
+                        <p>支持多种语言和字符集，包括中文、阿拉伯文等</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>稳定可靠</h3>
+                        <p>经过数十年验证的稳定系统，确保文档的一致性</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 示例部分 -->
+        <section id="examples" class="examples">
+            <div class="container">
+                <h2 class="section-title">应用示例</h2>
+                <div class="examples-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="math">数学公式</button>
+                        <button class="tab-btn" data-tab="table">表格</button>
+                        <button class="tab-btn" data-tab="bibliography">参考文献</button>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <div class="tab-panel active" id="math">
+                            <div class="example-container">
+                                <div class="code-block">
+                                    <div class="code-header">LaTeX 代码</div>
+                                    <pre><code>\begin{equation}
+\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+\end{equation}
+
+\begin{align}
+\nabla \times \vec{E} &= -\frac{\partial \vec{B}}{\partial t} \\
+\nabla \times \vec{B} &= \mu_0 \vec{J} + \mu_0 \epsilon_0 \frac{\partial \vec{E}}{\partial t}
+\end{align}</code></pre>
+                                </div>
+                                <div class="output-block">
+                                    <div class="output-header">输出效果</div>
+                                    <div class="math-output">
+                                        <div class="equation">∫<sub>-∞</sub><sup>∞</sup> e<sup>-x²</sup> dx = √π</div>
+                                        <div class="equation">∇ × E⃗ = -∂B⃗/∂t</div>
+                                        <div class="equation">∇ × B⃗ = μ₀J⃗ + μ₀ε₀ ∂E⃗/∂t</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-panel" id="table">
+                            <div class="example-container">
+                                <div class="code-block">
+                                    <div class="code-header">LaTeX 代码</div>
+                                    <pre><code>\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|r|}
+\hline
+项目 & 数量 & 价格 \\
+\hline
+笔记本 & 5 & ¥25.00 \\
+钢笔 & 3 & ¥15.00 \\
+橡皮 & 2 & ¥3.00 \\
+\hline
+总计 & 10 & ¥43.00 \\
+\hline
+\end{tabular}
+\caption{办公用品清单}
+\end{table}</code></pre>
+                                </div>
+                                <div class="output-block">
+                                    <div class="output-header">输出效果</div>
+                                    <div class="table-output">
+                                        <table>
+                                            <tr><th>项目</th><th>数量</th><th>价格</th></tr>
+                                            <tr><td>笔记本</td><td>5</td><td>¥25.00</td></tr>
+                                            <tr><td>钢笔</td><td>3</td><td>¥15.00</td></tr>
+                                            <tr><td>橡皮</td><td>2</td><td>¥3.00</td></tr>
+                                            <tr><td><strong>总计</strong></td><td><strong>10</strong></td><td><strong>¥43.00</strong></td></tr>
+                                        </table>
+                                        <p class="table-caption">表1: 办公用品清单</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-panel" id="bibliography">
+                            <div class="example-container">
+                                <div class="code-block">
+                                    <div class="code-header">LaTeX 代码</div>
+                                    <pre><code>根据研究\cite{knuth1984texbook}，TeX系统
+提供了优秀的排版质量。LaTeX的发展
+\cite{lamport1994latex}使得这一系统更加
+易于使用。
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+% references.bib 文件内容：
+@book{knuth1984texbook,
+  title={The TeXbook},
+  author={Knuth, Donald E.},
+  year={1984},
+  publisher={Addison-Wesley}
+}</code></pre>
+                                </div>
+                                <div class="output-block">
+                                    <div class="output-header">输出效果</div>
+                                    <div class="bib-output">
+                                        <p>根据研究[1]，TeX系统提供了优秀的排版质量。LaTeX的发展[2]使得这一系统更加易于使用。</p>
+                                        <h4>参考文献</h4>
+                                        <ol>
+                                            <li>Knuth, Donald E. <em>The TeXbook</em>. Addison-Wesley, 1984.</li>
+                                            <li>Lamport, Leslie. <em>LaTeX: A Document Preparation System</em>. Addison-Wesley, 1994.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 资源部分 -->
+        <section id="resources" class="resources">
+            <div class="container">
+                <h2 class="section-title">学习资源</h2>
+                <div class="resources-grid">
+                    <div class="resource-category">
+                        <h3>入门教程</h3>
+                        <ul>
+                            <li><a href="#" class="resource-link">LaTeX 入门指南</a></li>
+                            <li><a href="#" class="resource-link">数学公式编写教程</a></li>
+                            <li><a href="#" class="resource-link">文档结构设计</a></li>
+                            <li><a href="#" class="resource-link">常用宏包介绍</a></li>
+                        </ul>
+                    </div>
+                    <div class="resource-category">
+                        <h3>进阶内容</h3>
+                        <ul>
+                            <li><a href="#" class="resource-link">自定义文档类</a></li>
+                            <li><a href="#" class="resource-link">宏编程技巧</a></li>
+                            <li><a href="#" class="resource-link">图表制作高级技巧</a></li>
+                            <li><a href="#" class="resource-link">多语言排版</a></li>
+                        </ul>
+                    </div>
+                    <div class="resource-category">
+                        <h3>工具与模板</h3>
+                        <ul>
+                            <li><a href="#" class="resource-link">在线 LaTeX 编辑器</a></li>
+                            <li><a href="#" class="resource-link">学术论文模板</a></li>
+                            <li><a href="#" class="resource-link">简历模板集合</a></li>
+                            <li><a href="#" class="resource-link">演示文稿模板</a></li>
+                        </ul>
+                    </div>
+                    <div class="resource-category">
+                        <h3>社区支持</h3>
+                        <ul>
+                            <li><a href="#" class="resource-link">Stack Overflow</a></li>
+                            <li><a href="#" class="resource-link">LaTeX 中文社区</a></li>
+                            <li><a href="#" class="resource-link">CTAN 宏包库</a></li>
+                            <li><a href="#" class="resource-link">官方文档</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>LaTeX</h4>
+                    <p>专业文档排版系统</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#about">关于</a></li>
+                        <li><a href="#features">特性</a></li>
+                        <li><a href="#examples">示例</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>资源</h4>
+                    <ul>
+                        <li><a href="#">文档</a></li>
+                        <li><a href="#">教程</a></li>
+                        <li><a href="#">模板</a></li>
+                        <li><a href="#">社区</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LaTeX Press. | Copyright by CQMUtug. | 本网站仅用于教育目的.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
